@@ -8,7 +8,7 @@ const Button = (props: ButtonProps) => {
     <div>
       <button
         disabled={false}
-        type={"button"}
+        type={props.btnType || "button"}
         className={`custom-btn ${props.containerStyles}`}
         onClick={() => {
           props.handleClick;
