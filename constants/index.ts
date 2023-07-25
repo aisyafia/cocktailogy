@@ -1,4 +1,4 @@
-export const manufacturers = [
+export const ingredients = [
   "Acura",
   "Alfa Romeo",
   "Aston Martin",

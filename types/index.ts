@@ -6,3 +6,12 @@ export interface ButtonProps {
   handleClick?: MouseEventHandler<HTMLButtonElement>;
   btnType?: "button" | "submit";
 }
+
+export interface IngreProps {
+  ingre: string;
+  setIngre: (ingre: string) => void;
+}
+
+export interface FilterProps {
+  title?: string;
+}
