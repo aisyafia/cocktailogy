@@ -11,8 +11,9 @@ const Navbar = () => {
             src="/cocklogo.svg"
             alt="website logo"
             width={77}
-            height={7}
+            height={8}
             className="object-contain"
+            style={{ height: "auto" }}
           />
         </Link>
         <Button

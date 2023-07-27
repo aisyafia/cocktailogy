@@ -7,3 +7,4 @@ export * from "@/components/Footer";
 export * from "@/components/SearchBar";
 export * from "@/components/CustomFilter";
 export * from "@/components/SearchIngredients";
+export * from "@/components/DrinkCard";
