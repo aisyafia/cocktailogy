@@ -1,12 +1,10 @@
 import Image from "next/image";
 import { CustomFilter, DrinkCard, Hero, SearchBar } from "@/components";
-import { fetchDrinks } from "@/utils";
+import { fetchRandomDrinks } from "@/utils";
 
 export default async function Home() {
-  const drinksFetched = await fetchDrinks();
-
-  // console.log("vodka?", process.env.NEXT_PUBLIC_myKey);
-  // console.log("PROCESS ENV work?", process.env.myKey);
+  const drinksFetched = await fetchRandomDrinks();
+  // console.log("RANDOM drinks?", fetchRandomDrinks);
 
   const isDataEmpty =
     !Array.isArray(drinksFetched) || drinksFetched.length < 1 || !drinksFetched;
@@ -33,7 +31,7 @@ export default async function Home() {
           <section>
             <div>
               {drinksFetched?.map((drink) => (
-                <DrinkCard drink={drink} />
+                <DrinkCard randrink={drink} />
               ))}
             </div>
           </section>

@@ -16,3 +16,20 @@ export async function fetchDrinks() {
 
   return result;
 }
+
+export async function fetchRandomDrinks() {
+  const headers = {
+    "X-RapidAPI-Host": "the-cocktail-db.p.rapidapi.com",
+    "X-RapidAPI-Key": process.env.myKey,
+  };
+
+  const response = await fetch(
+    `https://the-cocktail-db.p.rapidapi.com/randomselection.php`,
+    {
+      headers: headers,
+    }
+  );
+  const result = await response.json();
+  // console.log(result.drinks, "RESULT???");
+  return result.drinks;
+}

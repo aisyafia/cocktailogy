@@ -14,7 +14,7 @@ const Button = (props: ButtonProps) => {
           props.handleClick;
         }}
       >
-        <span className={`flex-1`}>{props.title}</span>
+        <span className={`flex-1 ${props.textStyles}`}>{props.title}</span>
       </button>
     </div>
   );

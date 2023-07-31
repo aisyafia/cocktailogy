@@ -8,3 +8,4 @@ export * from "@/components/SearchBar";
 export * from "@/components/CustomFilter";
 export * from "@/components/SearchIngredients";
 export * from "@/components/DrinkCard";
+export * from "@/components/DrinkDetails";
