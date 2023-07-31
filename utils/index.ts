@@ -1,9 +1,7 @@
 export async function fetchDrinks() {
   const headers = {
-    // "X-RapidAPI-Key": "bc7cc44426msh89c4c15308cc9b4p14e1e3jsn6e522166c0d8",
-    // "X-RapidAPI-Host": "the-cocktail-db.p.rapidapi.com",
-    "X-RapidAPI-Key": "bc7cc44426msh89c4c15308cc9b4p14e1e3jsn6e522166c0d8",
     "X-RapidAPI-Host": "cocktail-by-api-ninjas.p.rapidapi.com",
+    "X-RapidAPI-Key": process.env.myKey,
   };
 
   const response = await fetch(

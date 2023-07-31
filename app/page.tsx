@@ -5,7 +5,8 @@ import { fetchDrinks } from "@/utils";
 export default async function Home() {
   const drinksFetched = await fetchDrinks();
 
-  // console.log("vodka?", drinksFetched);
+  // console.log("vodka?", process.env.NEXT_PUBLIC_myKey);
+  // console.log("PROCESS ENV work?", process.env.myKey);
 
   const isDataEmpty =
     !Array.isArray(drinksFetched) || drinksFetched.length < 1 || !drinksFetched;
