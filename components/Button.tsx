@@ -10,9 +10,7 @@ const Button = (props: ButtonProps) => {
         disabled={false}
         type={props.btnType || "button"}
         className={`custom-btn ${props.containerStyles}`}
-        onClick={() => {
-          props.handleClick;
-        }}
+        onClick={props.handleClick}
       >
         <span className={`flex-1 ${props.textStyles}`}>{props.title}</span>
       </button>

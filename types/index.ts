@@ -39,3 +39,9 @@ export interface RandrinksProps {
   strMeasure8?: string;
   strInstructions: string;
 }
+
+export interface DrinkDetailProps {
+  isOpen: boolean;
+  closeModal: () => void;
+  drink: RandrinksProps;
+}

@@ -4,7 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import { RandrinksProps } from "@/types";
 import Button from "./Button";
-import { DrinkDetails } from "./DrinkDetails";
+import { DrinkDetails } from "@/components";
 
 interface RandomDrinkProps {
   randrink: RandrinksProps;
@@ -13,16 +13,7 @@ interface RandomDrinkProps {
 const DrinkCard = ({ randrink }: RandomDrinkProps) => {
   const [open, setOpen] = useState(false);
 
-  const {
-    strDrink,
-    strDrinkThumb,
-    strCategory,
-    strIngredient1,
-    strIngredient2,
-    strMeasure1,
-    strMeasure2,
-    strInstructions,
-  } = randrink;
+  const { strDrink, strDrinkThumb, strCategory, strIngredient1 } = randrink;
 
   return (
     <div className="car-card group">
@@ -68,9 +59,13 @@ const DrinkCard = ({ randrink }: RandomDrinkProps) => {
           />
         </div>
       </div>
-      <DrinkDetails />
+      <DrinkDetails
+        isOpen={open}
+        closeModal={() => setOpen(false)}
+        drink={randrink}
+      />
     </div>
   );
 };
 
-export { DrinkCard };
+export default DrinkCard;
