@@ -11,6 +11,7 @@ export interface ButtonProps {
 export interface IngreProps {
   ingre: string;
   setIngre: (ingre: string) => void;
+  optional?: string;
 }
 
 export interface FilterProps {

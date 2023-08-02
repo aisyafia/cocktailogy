@@ -6,7 +6,7 @@ import Image from "next/image";
 import { useState, Fragment } from "react";
 import { ingredients } from "@/constants";
 
-const SearchIngredients = ({ ingre, setIngre }: IngreProps) => {
+const SearchIngredients = ({ ingre, setIngre, optional }: IngreProps) => {
   const [query, setQuery] = useState<string>("");
 
   const filteredIngre =
@@ -35,7 +35,7 @@ const SearchIngredients = ({ ingre, setIngre }: IngreProps) => {
 
           <Combobox.Input
             className="search-manufacturer__input"
-            placeholder="i.e. vodka, gin, rum, etc... "
+            placeholder={optional || "i.e. vodka, rum, gin, etc"}
             displayValue={(ingre: string) => ingre}
             onChange={(e) => setQuery(e.target.value)}
           />
