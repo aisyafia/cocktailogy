@@ -59,7 +59,8 @@ const SearchBar = () => {
       window.location.pathname
     }?${searchParams.toString()}`;
 
-    router.push(newPathname);
+    router.push(newPathname, { scroll: false });
+    //line above might not need changing. if so, just remove the scroll false
   };
 
   return (

@@ -36,3 +36,17 @@ export async function fetchRandomDrinks() {
     console.log("ERROR MESSAGE", error);
   }
 }
+
+export async function fetchDrinkByIngre(ingre: string) {
+  const headers = {
+    "X-RapidAPI-Host": "the-cocktail-db.p.rapidapi.com",
+    "X-RapidAPI-Key": process.env.API_KEY,
+  };
+  try {
+    const response = await fetch(
+      `https://the-cocktail-db.p.rapidapi.com/filter.php?i=${ingre}`
+    );
+  } catch (error) {
+    console.log("AN ERROR OCCURED", error);
+  }
+}
