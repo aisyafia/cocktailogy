@@ -17,7 +17,9 @@ export default function RootLayout({
     <html lang="en">
       <body className="relative">
         <Navbar />
-        {children}
+        <div className="container max-w-7xl mx-auto h-full pt-12">
+          {children}
+        </div>
         <Footer />
       </body>
     </html>

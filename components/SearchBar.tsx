@@ -5,6 +5,7 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 
 import { SearchIngredients } from "./SearchIngredients";
+import Link from "next/link";
 
 interface otherProps {
   otherClasses?: string;
@@ -30,17 +31,17 @@ const SearchBar = () => {
 
   const handleSearch = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    console.log("SELECTED INGRE:", ingre);
+    // if (ingre.trim() === "" && ingre2.trim() === "") {
+    //   return alert("Please provide some input");
+    // }
 
-    if (ingre.trim() === "" && ingre2.trim() === "") {
-      return alert("Please provide some input");
-    }
-
-    updateParams(ingre.toLowerCase(), ingre2.toLowerCase());
+    updateParams(ingre.toLowerCase());
     setIngre("");
     setIngre2("");
   };
 
-  const updateParams = (ingre: string, ingre2: string) => {
+  const updateParams = (ingre: string) => {
     const searchParams = new URLSearchParams(window.location.search);
 
     if (ingre) {
@@ -77,6 +78,7 @@ const SearchBar = () => {
           optional="second ingredient (optional)"
         />
       </div>
+
       <SearchButton />
     </form>
   );

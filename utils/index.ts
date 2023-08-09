@@ -44,8 +44,13 @@ export async function fetchDrinkByIngre(ingre: string) {
   };
   try {
     const response = await fetch(
-      `https://the-cocktail-db.p.rapidapi.com/filter.php?i=${ingre}`
+      `https://the-cocktail-db.p.rapidapi.com/filter.php?i=${ingre}`,
+      {
+        headers: headers,
+      }
     );
+    const result = await response.json();
+    return result.drinks;
   } catch (error) {
     console.log("AN ERROR OCCURED", error);
   }

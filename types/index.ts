@@ -46,3 +46,7 @@ export interface DrinkDetailProps {
   closeModal: () => void;
   drink: RandrinksProps;
 }
+
+export interface ResultProps {
+  searchParams: IngreProps;
+}
