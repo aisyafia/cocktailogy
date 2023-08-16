@@ -30,9 +30,13 @@ export default async function Home() {
         {!isDataEmpty ? (
           <section>
             <div>
-              {drinksFetched?.map((drink) => (
-                <DrinkCard randrink={drink} />
-              ))}
+              {drinksFetched?.map((drink) => {
+                return (
+                  <div>
+                    <DrinkCard key={drink.id} randrink={drink} />
+                  </div>
+                );
+              })}
             </div>
           </section>
         ) : (

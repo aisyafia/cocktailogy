@@ -31,12 +31,12 @@ const SearchBar = () => {
 
   const handleSearch = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log("SELECTED INGRE:", ingre);
+    // console.log("SELECTED INGRE:", ingre);
     // if (ingre.trim() === "" && ingre2.trim() === "") {
     //   return alert("Please provide some input");
     // }
 
-    updateParams(ingre.toLowerCase());
+    // updateParams(ingre.toLowerCase());
     setIngre("");
     setIngre2("");
   };
@@ -78,8 +78,9 @@ const SearchBar = () => {
           optional="second ingredient (optional)"
         />
       </div>
-
-      <SearchButton />
+      <Link href={`/searchresult/${ingre.toLowerCase()}`}>
+        <SearchButton />
+      </Link>
     </form>
   );
 };

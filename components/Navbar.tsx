@@ -15,6 +15,9 @@ const Navbar = () => {
             className="object-contain"
             style={{ height: "auto" }}
           />
+          <p className="hidden text-zinc-700 text-sm font-medium md:block">
+            Cocktailogy
+          </p>
         </Link>
         <Button
           title="Sign In"
