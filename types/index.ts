@@ -14,8 +14,14 @@ export interface IngreProps {
   optional?: string;
 }
 
+export interface OptionProps {
+  title: string;
+  value: string;
+}
+
 export interface FilterProps {
-  title?: string;
+  title: string;
+  options: OptionProps[];
 }
 
 export interface RandrinksProps {

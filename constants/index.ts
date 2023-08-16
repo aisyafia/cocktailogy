@@ -41,31 +41,28 @@ export const ingredients = [
   "Calvados",
 ];
 
-export const yearsOfProduction = [
-  { title: "Year", value: "" },
-  { title: "2015", value: "2015" },
-  { title: "2016", value: "2016" },
-  { title: "2017", value: "2017" },
-  { title: "2018", value: "2018" },
-  { title: "2019", value: "2019" },
-  { title: "2020", value: "2020" },
-  { title: "2021", value: "2021" },
-  { title: "2022", value: "2022" },
-  { title: "2023", value: "2023" },
+export const alcoholic = [
+  { title: "Drink Type", value: "" },
+  { title: "Alcoholic", value: "Alcoholic" },
+  { title: "Non-alcoholic", value: "Non-alcoholic" },
 ];
 
-export const fuels = [
+export const category = [
   {
-    title: "Fuel",
+    title: "Category",
     value: "",
   },
   {
-    title: "Gas",
-    value: "Gas",
+    title: "Cocktails",
+    value: "Cocktails",
   },
   {
-    title: "Electricity",
-    value: "Electricity",
+    title: "Ordinary drink",
+    value: "Ordinary drink",
+  },
+  {
+    title: "Shot",
+    value: "Shot",
   },
 ];
 

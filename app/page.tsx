@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { CustomFilter, DrinkCard, Hero, SearchBar } from "@/components";
 import { fetchRandomDrinks } from "@/utils";
+import { alcoholic, category } from "@/constants";
 
 export default async function Home() {
   const drinksFetched = await fetchRandomDrinks();
@@ -22,8 +23,8 @@ export default async function Home() {
         <div className="home__filters">
           <SearchBar />
           <div className="home__filter-container">
-            <CustomFilter title="fuel" />
-            <CustomFilter title="year" />
+            <CustomFilter title="alcoholic?" options={alcoholic} />
+            <CustomFilter title="category" options={category} />
           </div>
         </div>
 

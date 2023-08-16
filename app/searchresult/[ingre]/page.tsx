@@ -12,6 +12,7 @@ const Result = async ({ params }: Result) => {
   // console.log("INGREDIENTS?", ingre);
   const drinksByIngre = await fetchDrinkByIngre(ingre);
   // console.log("SELECTED INGREDIENT:", ingre);
+  // console.log(drinksByIngre, "FETCHED DRINKS");
 
   const isDataEmpty =
     !Array.isArray(drinksByIngre) || drinksByIngre.length < 1 || !drinksByIngre;
