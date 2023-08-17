@@ -21,12 +21,14 @@ const DrinkCard = ({ randrink }: RandomDrinkProps) => {
         <h2 className="car-card__content-title">{strDrink}</h2>
       </div>
 
-      <p className="flex mt-6 text-[20px] leading-[38px]">
-        <span className="self-start text-[14px] leading-[17px] font-semibold">
-          Base drink:
-        </span>
-        {strIngredient1}
-      </p>
+      {strIngredient1 && (
+        <p className="flex mt-6 text-[20px] leading-[38px]">
+          <span className="self-start text-[14px] leading-[17px] font-semibold">
+            Base drink:
+          </span>
+          {strIngredient1}
+        </p>
+      )}
 
       <div className="relative w-full h-40 my-3 object-contain ">
         <Image

@@ -7,6 +7,28 @@ import { Dialog, Transition } from "@headlessui/react";
 import { DrinkDetailProps } from "@/types";
 
 const DrinkDetails = (props: DrinkDetailProps) => {
+  const {
+    strDrink,
+    strDrinkThumb,
+    strIngredient1,
+    strIngredient2,
+    strIngredient3,
+    strIngredient4,
+    strIngredient5,
+    strIngredient6,
+    strIngredient7,
+    strIngredient8,
+    strMeasure1,
+    strMeasure2,
+    strMeasure3,
+    strMeasure4,
+    strMeasure5,
+    strMeasure6,
+    strMeasure7,
+    strMeasure8,
+    strInstructions,
+  } = props.drink;
+
   return (
     <>
       <Transition appear show={props.isOpen} as={Fragment}>
@@ -51,8 +73,8 @@ const DrinkDetails = (props: DrinkDetailProps) => {
                   <div className="flex-1 flex flex-col gap-3">
                     <div className="relative w-full h-40 bg-pattern bg-cover bg-center rounded-lg">
                       <Image
-                        src={props.drink.strDrinkThumb}
-                        alt={`picture of ${props.drink.strDrink}`}
+                        src={strDrinkThumb}
+                        alt={`picture of ${strDrink}`}
                         fill
                         priority
                         className="object-contain"
@@ -61,23 +83,35 @@ const DrinkDetails = (props: DrinkDetailProps) => {
                   </div>
 
                   <div className="flex-1 flex flex-col gap-2">
-                    <h2 className="font-semibold text-xl">
-                      {props.drink.strDrink}
-                    </h2>
+                    <h2 className="font-semibold text-xl">{strDrink}</h2>
 
                     <div className="mt-3 flex flex-wrap gap-4">
-                      {Object.entries(props.drink).map(([key, value]) => {
-                        return (
-                          <div
-                            className="flex justify-between gap-5 w-full text-right"
-                            key={key}
-                          >
-                            <h4>{key}</h4>
-                            <p>{value}</p>
-                          </div>
-                        );
-                      })}
+                      <h4 className="font-semibold">Ingredients : </h4>
+                      <div>
+                        {strIngredient1} - {strMeasure1} <br />
+                        {strIngredient2 && strMeasure2
+                          ? `${strIngredient2} - ${strMeasure2}`
+                          : ""}{" "}
+                        <br />
+                        {strIngredient3 && strMeasure3
+                          ? `${strIngredient3} - ${strMeasure3}`
+                          : ""}{" "}
+                        <br />
+                        {strIngredient4 && strMeasure4
+                          ? `${strIngredient4} - ${strMeasure4}`
+                          : ""}{" "}
+                        <br />
+                        {strIngredient5 && strMeasure5
+                          ? `${strIngredient5} - ${strMeasure5}`
+                          : ""}{" "}
+                        <br />
+                        {strIngredient6 && strMeasure6
+                          ? `${strIngredient6} - ${strMeasure6}`
+                          : ""}{" "}
+                      </div>
                     </div>
+                    <h4 className="font-semibold">How to make: </h4>
+                    {strInstructions}
                   </div>
                 </Dialog.Panel>
               </Transition.Child>

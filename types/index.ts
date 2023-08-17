@@ -56,3 +56,8 @@ export interface DrinkDetailProps {
 export interface ResultProps {
   searchParams: IngreProps;
 }
+
+export interface ShowMoreProps {
+  pageNumber: number;
+  isNext?: boolean;
+}

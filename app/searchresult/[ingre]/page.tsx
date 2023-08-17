@@ -1,5 +1,5 @@
 import { fetchDrinkByIngre } from "@/utils";
-import { DrinkCard } from "@/components";
+import { DrinkCard, ShowMore } from "@/components";
 
 interface Result {
   params: {
@@ -38,6 +38,7 @@ const Result = async ({ params }: Result) => {
                 );
               })}
             </div>
+            <ShowMore pageNumber={1} isNext={10 > drinksByIngre.length} />
           </section>
         ) : (
           <div>
