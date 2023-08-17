@@ -31,37 +31,8 @@ const SearchBar = () => {
 
   const handleSearch = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // console.log("SELECTED INGRE:", ingre);
-    // if (ingre.trim() === "" && ingre2.trim() === "") {
-    //   return alert("Please provide some input");
-    // }
-
-    // updateParams(ingre.toLowerCase());
     setIngre("");
     setIngre2("");
-  };
-
-  const updateParams = (ingre: string) => {
-    const searchParams = new URLSearchParams(window.location.search);
-
-    if (ingre) {
-      searchParams.set("ingredient", ingre);
-    } else {
-      searchParams.delete("ingredient");
-    }
-
-    if (ingre2) {
-      searchParams.set("2nd ingredient", ingre2);
-    } else {
-      searchParams.delete("2nd ingredient");
-    }
-
-    const newPathname = `${
-      window.location.pathname
-    }?${searchParams.toString()}`;
-
-    router.push(newPathname, { scroll: false });
-    //line above might not need changing. if so, just remove the scroll false
   };
 
   return (

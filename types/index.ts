@@ -45,6 +45,7 @@ export interface RandrinksProps {
   strMeasure7?: string;
   strMeasure8?: string;
   strInstructions: string;
+  idDrink: string;
 }
 
 export interface DrinkDetailProps {

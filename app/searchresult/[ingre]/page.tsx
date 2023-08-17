@@ -1,4 +1,4 @@
-import { fetchDrinkByIngre } from "@/utils";
+import { fetchDrinkById, fetchDrinkByIngre } from "@/utils";
 import { DrinkCard, ShowMore } from "@/components";
 
 interface Result {
@@ -30,12 +30,7 @@ const Result = async ({ params }: Result) => {
           <section>
             <div>
               {drinksByIngre?.map((drinks) => {
-                return (
-                  <div>
-                    <DrinkCard key={drinks.id} randrink={drinks} />
-                    <p>{drinks.strIngredient1}</p>
-                  </div>
-                );
+                return <DrinkCard randrink={drinks} />;
               })}
             </div>
             <ShowMore pageNumber={1} isNext={10 > drinksByIngre.length} />
