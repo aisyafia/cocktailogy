@@ -1,4 +1,4 @@
-import { fetchDrinkById, fetchDrinkByIngre } from "@/utils";
+import { fetchDrinkByIngre } from "@/utils";
 import { DrinkCard, ShowMore } from "@/components";
 
 interface Result {
