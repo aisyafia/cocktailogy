@@ -34,7 +34,7 @@ export default async function Home() {
               {drinksFetched?.map((drink) => {
                 return (
                   <div>
-                    <DrinkCard key={drink.id} randrink={drink} />
+                    <DrinkCard key={drink} randrink={drink} />
                   </div>
                 );
               })}
