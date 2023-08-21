@@ -2,6 +2,7 @@ import Hero from "./Hero";
 import Button from "./Button";
 import DrinkCard from "./DrinkCard";
 import DrinkDetails from "./DrinkDetails";
+import SearchedDrinkCard from "./SearchedDrinkCard";
 
 export { Hero, Button, DrinkCard, DrinkDetails };
 export * from "@/components/Navbar";

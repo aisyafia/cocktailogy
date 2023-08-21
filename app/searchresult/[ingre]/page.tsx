@@ -1,5 +1,6 @@
 import { fetchDrinkByIngre } from "@/utils";
 import { DrinkCard, ShowMore } from "@/components";
+import SearchedDrinkCard from "@/components/SearchedDrinkCard";
 
 interface Result {
   params: {
@@ -30,7 +31,7 @@ const Result = async ({ params }: Result) => {
           <section>
             <div>
               {drinksByIngre?.map((drinks) => {
-                return <DrinkCard randrink={drinks} />;
+                return <SearchedDrinkCard drink={drinks} />;
               })}
             </div>
             <ShowMore pageNumber={1} isNext={10 > drinksByIngre.length} />
