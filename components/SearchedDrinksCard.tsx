@@ -10,7 +10,7 @@ interface RandomDrinkProps {
   drink: RandrinksProps;
 }
 
-const SearchedDrinkCard = ({ drink }: RandomDrinkProps) => {
+const SearchedDrinksCard = ({ drink }: RandomDrinkProps) => {
   const [open, setOpen] = useState(false);
   const [oneDrink, setOneDrink] = useState(null);
 
@@ -19,7 +19,7 @@ const SearchedDrinkCard = ({ drink }: RandomDrinkProps) => {
   const getADrink = async () => {
     const result = await fetchDrinkDetailsById(idDrink);
     setOneDrink(result[0]);
-    // console.log("DO WE GET A DRINK?", oneDrink);
+    // console.log("DO WE GET A DRINK?", result);
   };
 
   const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
@@ -74,4 +74,4 @@ const SearchedDrinkCard = ({ drink }: RandomDrinkProps) => {
   );
 };
 
-export default SearchedDrinkCard;
+export default SearchedDrinksCard;
