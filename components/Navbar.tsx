@@ -19,10 +19,12 @@ const Navbar = () => {
             Cocktailogy
           </p>
         </Link>
-        <Button
-          title="Sign In"
-          containerStyles="text-primary-blue rounded-full bg-white min-w-[130px] hover:bg-sky-200"
-        />
+        <Link href="/sign-in">
+          <Button
+            title="Sign In"
+            containerStyles="text-primary-blue rounded-full bg-white min-w-[130px] hover:bg-sky-200"
+          />
+        </Link>
       </nav>
     </header>
   );
