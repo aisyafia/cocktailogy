@@ -2,8 +2,19 @@ import Image from "next/image";
 import Button from "@/components/Button";
 import Link from "next/link";
 import { UserAuthForm } from "@/components";
+import { authOptions } from "@/lib/auth";
+import { getServerSession } from "next-auth";
+import { redirect } from "next/navigation";
 
-const SignIn = () => {
+const SignIn = async () => {
+  const session = await getServerSession(authOptions);
+
+  // if (!session) {
+  //   redirect("/api/auth/sign-in");
+  // } else {
+  //   redirect("/");
+  // }
+
   return (
     <main className="overflow-hidden padding-y">
       <div className="mt-10 padding-x padding-y max-width">

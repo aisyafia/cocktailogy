@@ -2,6 +2,8 @@ import Image from "next/image";
 import { CustomFilter, DrinkCard, Hero, SearchBar } from "@/components";
 import { fetchRandomDrinks } from "@/utils";
 import { alcoholic, category } from "@/constants";
+import { authOptions } from "@/lib/auth";
+import { getServerSession } from "next-auth";
 
 export default async function Home() {
   const drinksFetched = await fetchRandomDrinks();
@@ -10,6 +12,8 @@ export default async function Home() {
   const isDataEmpty =
     !Array.isArray(drinksFetched) || drinksFetched.length < 1 || !drinksFetched;
 
+  const session = await getServerSession(authOptions);
+
   return (
     <main className="overflow-hidden">
       <Hero />
@@ -17,6 +21,7 @@ export default async function Home() {
       <div className="mt-10 padding-x padding-y max-width" id="discover">
         <div className="home__text-container">
           <h1 className="text-4xl font-extrabold">Drinks Menu</h1>
+          {session ? <p>You are logged in!</p> : <></>}
           <p>Pick your poison</p>
         </div>
 
